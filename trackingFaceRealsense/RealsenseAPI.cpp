@@ -166,7 +166,7 @@ void RealsenseAPI::getGazePoint(vector<Point>& gazePointVector) {
 void RealsenseAPI::drawFaceLandmarks(Mat& img, vector<vector<FaceData::LandmarkPoint>>& facelandmarkVector) {
 	for (int i = 0, n = facelandmarkVector.size(); i < n; i++) {
 		for (int j = 0, m = facelandmarkVector[i].size(); j < m; j++) {
-			auto alias = facelandmarkVector[i][j].source.alias;
+			//auto alias = facelandmarkVector[i][j].source.alias; //‚±‚ê‚ÅŠç‚Ì‚Ç‚±‚Ìƒp[ƒc‚©‚í‚©‚é
 			int x = facelandmarkVector[i][j].image.x;
 			int y = facelandmarkVector[i][j].image.y;
 			cv::circle(img, Point(x, y), 5, Scalar(255, 0, 0), -1);
